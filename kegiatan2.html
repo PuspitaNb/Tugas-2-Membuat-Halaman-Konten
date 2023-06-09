@@ -35,7 +35,40 @@
                     <li>Memberikan bantuan kepada mereka yang membutuhkan entah itu dalam bentuk materi atau fisik.</li>
                     <li>Memberikan pelayanan kepada warganya. Pelayanan ini meliputi berbagai hal, jadi para warga pun bisa tertolong jika tak bisa mrlakukan suatu kegiatan itu sendiri</li>
                     <li>Melakukan pembimbingan kepada warga. Contohnya bimbingan sosial dengan memberikan motivasi, menerima konsultasi para warga lantas memberi saran pada mereka.</li>
+                <br>
+                    <br>
+                    <div>
+                        <input type="number" id="angka1">
+                        <select id="operator">
+                         <option value="+">+</option>
+                         <option value="-">-</option>
+                         <option value=""></option>
+                         <option value="/">/</option>
+                        </select>
+                        <input type="number" id="angka2">
+                        <span>=</span>
+                        <span id="hasil">Hasil</span><br><br>
+                        <button id="submit">Submit</button>
+                    </div>
+                    
+                    <script>
+                        const angka1 = document.getElementById("angka1");
+                        const angka2 = document.getElementById("angka2");
+                        const operator = document.getElementById("operator");
+                        const hasil = document.getElementById("hasil");
+                        const submit = document.getElementById("submit");
+                    submit.addEventListener('click', function(){
                 
+                        hasil.innerText = eval(angka1.value + operator.value + angka2.value);
+                        
+                        //hasil.innerText = Number(angka1.value) + operator.value + Number(angka2.value);
+                        //hasil.innerText = Number(angka1.value) - Number(angka2.value);
+                        //hasil.innerText = Number(angka1.value) * Number(angka2.value);
+                        //hasil.innerText = Number(angka1.value) / Number(angka2.value);
+                
+                    })
+                
+                    </script>
            </div>
         </section>
 
